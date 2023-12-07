@@ -1,0 +1,301 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-12-07T00:07:33.368745+00:00",
+  "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOKq5sns5fbCKg",
+      "title": "Stubs",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/1",
+      "state": "MERGED",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-11-14T15:18:26Z",
+      "updatedAt": "2023-11-15T14:07:39Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "7e04acb84671d3d3914265ee6a70a218da364b50",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "bas-initial",
+      "headRefOid": "ba1dbe7d7bcc62c2fe4fca3139d7aa447a86f786",
+      "closedAt": "2023-11-15T14:07:38Z",
+      "mergedAt": "2023-11-15T14:07:38Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "61f3943667621fd0f7132380d6cc798e466af9e8"
+      },
+      "comments": [
+        {
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "body": "Good to merge, we'll keep cranking on the TODOs",
+          "createdAt": "2023-11-15T14:07:32Z",
+          "updatedAt": "2023-11-15T14:07:32Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5nHpmi",
+          "commit": {
+            "abbreviatedOid": "ce5f113"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-11-14T15:42:31Z",
+          "updatedAt": "2023-11-14T15:49:13Z",
+          "comments": [
+            {
+              "originalPosition": 71,
+              "body": "sha3 also is more secure than sha2 and avoids requiring hkdf",
+              "createdAt": "2023-11-14T15:42:31Z",
+              "updatedAt": "2023-11-14T15:49:13Z"
+            },
+            {
+              "originalPosition": 64,
+              "body": "\ud83d\udc4d",
+              "createdAt": "2023-11-14T15:48:03Z",
+              "updatedAt": "2023-11-14T15:49:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5nIuTG",
+          "commit": {
+            "abbreviatedOid": "ce5f113"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-11-14T17:38:25Z",
+          "updatedAt": "2023-11-14T17:38:25Z",
+          "comments": [
+            {
+              "originalPosition": 126,
+              "body": "\ud83d\udc4d",
+              "createdAt": "2023-11-14T17:38:25Z",
+              "updatedAt": "2023-11-14T17:38:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5nJaNb",
+          "commit": {
+            "abbreviatedOid": "ce5f113"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-11-14T18:59:36Z",
+          "updatedAt": "2023-11-14T18:59:36Z",
+          "comments": [
+            {
+              "originalPosition": 157,
+              "body": "`SHAKE` here, `SHA3-256` elsewhere, ...?",
+              "createdAt": "2023-11-14T18:59:36Z",
+              "updatedAt": "2023-11-14T18:59:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5nNbcC",
+          "commit": {
+            "abbreviatedOid": "ce5f113"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-11-15T09:18:01Z",
+          "updatedAt": "2023-11-15T09:18:02Z",
+          "comments": [
+            {
+              "originalPosition": 157,
+              "body": "We need 96 bytes, hence SHAKE128.\r\n\r\nIn the other place could use SHAKE256 instead of SHA3-256. Doesn't make a difference.",
+              "createdAt": "2023-11-15T09:18:01Z",
+              "updatedAt": "2023-11-15T09:18:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5nNccg",
+          "commit": {
+            "abbreviatedOid": "ce5f113"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-11-15T09:19:57Z",
+          "updatedAt": "2023-11-15T09:19:57Z",
+          "comments": [
+            {
+              "originalPosition": 71,
+              "body": "Technically SHA3 is more secure, but it feels to me like stating that a 40,000kg rock is harder to lift by a person than a 10,000kg rock. Both are impossible.\r\nThe hkdf point is a good one.",
+              "createdAt": "2023-11-15T09:19:57Z",
+              "updatedAt": "2023-11-15T09:19:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5nPVjd",
+          "commit": {
+            "abbreviatedOid": "ce5f113"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-11-15T13:49:37Z",
+          "updatedAt": "2023-11-15T13:49:38Z",
+          "comments": [
+            {
+              "originalPosition": 71,
+              "body": "Added text",
+              "createdAt": "2023-11-15T13:49:37Z",
+              "updatedAt": "2023-11-15T13:49:38Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOKq5sns5gdBAK",
+      "title": "Leave out ML-KEM-768 ciphertext in combiner",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/2",
+      "state": "MERGED",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-11-27T15:36:17Z",
+      "updatedAt": "2023-11-29T15:19:47Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "253e06b9a9ce941511422e302795c671af847cbe",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "no-mlkem-ct",
+      "headRefOid": "984ccc11ec739d081d41a3f7538a9fae2e38770e",
+      "closedAt": "2023-11-29T15:19:46Z",
+      "mergedAt": "2023-11-29T15:19:46Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "db395fc40ddb114469feef2723d1ba4163ec4aac"
+      },
+      "comments": [
+        {
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "body": "The removal of the mlkem ciphertext is currently not motivated in this version ",
+          "createdAt": "2023-11-27T15:49:25Z",
+          "updatedAt": "2023-11-27T15:49:25Z"
+        },
+        {
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Explicitly mentioned that in the security considerations TODO. It's not a sealed deal, but to prevent rewriting in a later stage, I think betting that it'll work out is best.",
+          "createdAt": "2023-11-27T16:55:04Z",
+          "updatedAt": "2023-11-27T16:55:04Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5oo0pb",
+          "commit": {
+            "abbreviatedOid": "984ccc1"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-11-29T15:19:40Z",
+          "updatedAt": "2023-11-29T15:19:40Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOKq5sns5grm-1",
+      "title": "Add some security considerations",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/3",
+      "state": "CLOSED",
+      "author": "dconnolly",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-11-29T15:14:08Z",
+      "updatedAt": "2023-11-29T15:24:46Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "253e06b9a9ce941511422e302795c671af847cbe",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "dconnolly-patch-1",
+      "headRefOid": "b94a9457bc9ae16eff0cf160a3fa930735428c09",
+      "closedAt": "2023-11-29T15:24:46Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
