@@ -1518,12 +1518,9 @@ def GenerateKeyPair():
         <h3 id="name-combiner">
 <a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-combiner" class="section-name selfRef">Combiner</a>
         </h3>
-<p id="section-5.3-1">Given 32 byte strings ss_M, ss_X, ct_X, pk_X,
-    representing the ML-KEM-768 shared secret,
-    X25519 shared secret,
-    X25519 cipher text (ephemeral public key)
-    and X25519 public key respectively,
-the combined shared secret is given by<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-1">Given 32 byte strings ss_M, ss_X, ct_X, pk_X, representing the ML-KEM-768
+shared secret, X25519 shared secret, X25519 cipher text (ephemeral public key)
+and X25519 public key respectively, the combined shared secret is given by:<a href="#section-5.3-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-5.3-2">
 <pre>
 def Combiner(ss_M, ss_X, ct_X, pk_X):
