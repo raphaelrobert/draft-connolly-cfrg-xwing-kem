@@ -186,7 +186,8 @@ Table of Contents
    similar security, but:
 
    *  X-Wing is more performant, not hashing in the ML-KEM-768
-      ciphertext, and flattening the DHKEM construction.
+      ciphertext, and flattening the DHKEM construction, with the same
+      level of security.
 
    *  X-Wing has a fixed 32 byte shared secret, instead of a variable
       shared secret.
