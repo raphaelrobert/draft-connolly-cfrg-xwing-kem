@@ -264,10 +264,6 @@ Table of Contents
 
    Shared secret:  32 bytes
 
-   Auth:  no
-
-   Reference:  This document
-
 5.2.  Key derivation
 
    An X-Wing keypair (private key, public key) is derived from entropy
@@ -401,6 +397,10 @@ Table of Contents
    Npk:  1216
 
    Nsk:  2432
+
+   Auth:  no
+
+   Reference:  This document
 
    Furthermore, this document requests/registers a new entry to the TLS
    Named Group (or Supported Group) registry, according to the
