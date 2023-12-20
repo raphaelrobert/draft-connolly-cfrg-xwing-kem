@@ -1435,18 +1435,26 @@ from ct_M.<a href="#section-4-2.1.2.3.1" class="pilcrow">¶</a></p>
 Curve25519 scalar and curvepoint respectively, and returns
 the 32 byte string representing their scalar multiplication.<a href="#section-4-2.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
+            <li class="normal" id="section-4-2.2.2.2">
+              <p id="section-4-2.2.2.2.1"><code>X25519_BASE</code>: the 32 byte string representing the standard base point
+of Curve25519. In hex
+it is given by <code>09000000000000000000000000000000000000000000</code>.<a href="#section-4-2.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
           </ul>
 </li>
-        <li class="normal" id="section-4-2.3">
-          <p id="section-4-2.3.1">Symmetric cryptography.<a href="#section-4-2.3.1" class="pilcrow">¶</a></p>
+      </ul>
+<p id="section-4-3">Note that 9 is the standard basepoint for X25519, cf <span><a href="https://rfc-editor.org/rfc/rfc7748#section-6.1" class="relref">Section 6.1</a> of [<a href="#RFC7748" class="cite xref">RFC7748</a>]</span>.<a href="#section-4-3" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4-2.3.2.1">
-              <p id="section-4-2.3.2.1.1"><code>SHAKE128(message, outlen)</code>: The extendable-output function (XOF)
-defined in Section 6.2 of <span>[<a href="#FIPS202" class="cite xref">FIPS202</a>]</span>.<a href="#section-4-2.3.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-4-4.1">
+          <p id="section-4-4.1.1">Symmetric cryptography.<a href="#section-4-4.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4-4.1.2.1">
+              <p id="section-4-4.1.2.1.1"><code>SHAKE128(message, outlen)</code>: The extendable-output function (XOF)
+defined in Section 6.2 of <span>[<a href="#FIPS202" class="cite xref">FIPS202</a>]</span>.<a href="#section-4-4.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4-2.3.2.2">
-              <p id="section-4-2.3.2.2.1"><code>SHA3-256(message)</code>: The hash defined in
-defined in Section 6.1 of <span>[<a href="#FIPS202" class="cite xref">FIPS202</a>]</span>.<a href="#section-4-2.3.2.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-4-4.1.2.2">
+              <p id="section-4-4.1.2.2.1"><code>SHA3-256(message)</code>: The hash defined in
+defined in Section 6.1 of <span>[<a href="#FIPS202" class="cite xref">FIPS202</a>]</span>.<a href="#section-4-4.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </li>
@@ -1501,7 +1509,7 @@ def DeriveKeyPair(ikm):
   seed = SHAKE128(ikm, 96)
   seed1 = seed[0:32]
   seed2 = seed[32:96]
-  (sk1, pk1) = X25519(seed1, 9)
+  (sk1, pk1) = X25519(seed1, X25519_BASE)
   (sk2, pk2) = ML-KEM-768.DeriveKeyPair(seed2)
   return concat(sk1, sk2), concat(pk1, pk2)
 
@@ -1509,8 +1517,7 @@ def GenerateKeyPair():
   return DeriveKeyPair(random(32))
 </pre><a href="#section-5.2-2" class="pilcrow">¶</a>
 </div>
-<p id="section-5.2-3">Note that 9 is the standard basepoint for X25519, cf <span><a href="https://rfc-editor.org/rfc/rfc7748#section-6.1" class="relref">Section 6.1</a> of [<a href="#RFC7748" class="cite xref">RFC7748</a>]</span>.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
-<p id="section-5.2-4">ikm <span class="bcp14">SHOULD</span> be at least 32 bytes in length.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
+<p id="section-5.2-3">ikm <span class="bcp14">SHOULD</span> be at least 32 bytes in length.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="combiner">
@@ -1556,7 +1563,7 @@ def Encapsulate(pk):
   pk_M = pk[0:1184]
   pk_X = pk[1184:1216]
   ek_X = random(32)
-  ct_X = X25519(ek_X, 9)
+  ct_X = X25519(ek_X, X25519_BASE)
   ss_X = X25519(ek_X, pk_X)
   (ss_M, ct_M) = ML-KEM-768.Encapsulate(pk_M)
   ss = Combiner(ss_M, ss_X, ct_X, pk_X)
