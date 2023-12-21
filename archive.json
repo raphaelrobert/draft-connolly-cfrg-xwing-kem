@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-12-19T00:07:29.483099+00:00",
+  "timestamp": "2023-12-21T00:07:20.152683+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -296,6 +296,273 @@
       "mergeCommit": null,
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOKq5sns5id0ex",
+      "title": "Big pass",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/4",
+      "state": "OPEN",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "See Zulip for discussion on some of these changes.",
+      "createdAt": "2023-12-20T12:27:06Z",
+      "updatedAt": "2023-12-20T16:45:07Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "6ad573a31fc94d40f43245ac0311e9cd56815ee5",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "bas-big-pass",
+      "headRefOid": "1cac1f033aac629d325a1baabe1bde1e8502db62",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5qw5RQ",
+          "commit": {
+            "abbreviatedOid": "209d8ef"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T15:52:30Z",
+          "updatedAt": "2023-12-20T15:52:30Z",
+          "comments": [
+            {
+              "originalPosition": 79,
+              "body": "```suggestion\r\n* X-Wing is more performant, not hashing in the ML-KEM-768 ciphertext,\r\n  and flattening the DHKEM construction, with the same level of security.\r\n```",
+              "createdAt": "2023-12-20T15:52:30Z",
+              "updatedAt": "2023-12-20T15:52:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qw6a5",
+          "commit": {
+            "abbreviatedOid": "6509a6b"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T15:54:58Z",
+          "updatedAt": "2023-12-20T15:54:59Z",
+          "comments": [
+            {
+              "originalPosition": 160,
+              "body": "We need to define the keygen algorithm and point at RFC 7748",
+              "createdAt": "2023-12-20T15:54:59Z",
+              "updatedAt": "2023-12-20T15:54:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qw67u",
+          "commit": {
+            "abbreviatedOid": "6509a6b"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T15:56:06Z",
+          "updatedAt": "2023-12-20T15:56:06Z",
+          "comments": [
+            {
+              "originalPosition": 160,
+              "body": "And we need the component scheme serialization routines",
+              "createdAt": "2023-12-20T15:56:06Z",
+              "updatedAt": "2023-12-20T15:56:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qw88T",
+          "commit": {
+            "abbreviatedOid": "6509a6b"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:00:22Z",
+          "updatedAt": "2023-12-20T16:00:22Z",
+          "comments": [
+            {
+              "originalPosition": 160,
+              "body": "As in the paper since we need keygen() and serialization stuff having our definition of `X25519 { keygen(), DH(), ... }` etc makes this nicer ",
+              "createdAt": "2023-12-20T16:00:22Z",
+              "updatedAt": "2023-12-20T16:00:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qw9uC",
+          "commit": {
+            "abbreviatedOid": "6509a6b"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:01:50Z",
+          "updatedAt": "2023-12-20T16:01:50Z",
+          "comments": [
+            {
+              "originalPosition": 160,
+              "body": "I don't think we need to: I inline the keygen into the definition of X-Kem. That also fits with the proof.",
+              "createdAt": "2023-12-20T16:01:50Z",
+              "updatedAt": "2023-12-20T16:01:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qw98H",
+          "commit": {
+            "abbreviatedOid": "6509a6b"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:02:18Z",
+          "updatedAt": "2023-12-20T16:02:18Z",
+          "comments": [
+            {
+              "originalPosition": 160,
+              "body": "Also this makes it simpler to implement as most libraries only expose the DH function of X25519.",
+              "createdAt": "2023-12-20T16:02:18Z",
+              "updatedAt": "2023-12-20T16:02:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qw-Ox",
+          "commit": {
+            "abbreviatedOid": "6509a6b"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:02:55Z",
+          "updatedAt": "2023-12-20T16:02:55Z",
+          "comments": [
+            {
+              "originalPosition": 160,
+              "body": "(eg. https://pkg.go.dev/golang.org/x/crypto/curve25519 )",
+              "createdAt": "2023-12-20T16:02:55Z",
+              "updatedAt": "2023-12-20T16:02:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qxFPp",
+          "commit": {
+            "abbreviatedOid": "6509a6b"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:19:10Z",
+          "updatedAt": "2023-12-20T16:19:10Z",
+          "comments": [
+            {
+              "originalPosition": 234,
+              "body": "```suggestion\r\nGiven 32 byte strings ss_M, ss_X, ct_X, pk_X, representing the ML-KEM-768\r\nshared secret, X25519 shared secret, X25519 cipher text (ephemeral public key)\r\nand X25519 public key respectively, the combined shared secret is given by:\r\n```",
+              "createdAt": "2023-12-20T16:19:10Z",
+              "updatedAt": "2023-12-20T16:19:10Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qxGmk",
+          "commit": {
+            "abbreviatedOid": "aaa0f5a"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:22:24Z",
+          "updatedAt": "2023-12-20T16:22:24Z",
+          "comments": [
+            {
+              "originalPosition": 160,
+              "body": "> Also this makes it simpler to implement as most libraries only expose the DH function of X25519.\r\n\r\nhm, fair",
+              "createdAt": "2023-12-20T16:22:24Z",
+              "updatedAt": "2023-12-20T16:22:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qxKsb",
+          "commit": {
+            "abbreviatedOid": "aaa0f5a"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:31:57Z",
+          "updatedAt": "2023-12-20T16:31:57Z",
+          "comments": [
+            {
+              "originalPosition": 256,
+              "body": "\ud83d\udcaf",
+              "createdAt": "2023-12-20T16:31:57Z",
+              "updatedAt": "2023-12-20T16:31:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qxP0R",
+          "commit": {
+            "abbreviatedOid": "6509a6b"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:44:19Z",
+          "updatedAt": "2023-12-20T16:44:19Z",
+          "comments": [
+            {
+              "originalPosition": 160,
+              "body": "I removed the ugly hardcoded 9.",
+              "createdAt": "2023-12-20T16:44:19Z",
+              "updatedAt": "2023-12-20T16:44:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5qxQK1",
+          "commit": {
+            "abbreviatedOid": "1cac1f0"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-20T16:45:07Z",
+          "updatedAt": "2023-12-20T16:45:07Z",
+          "comments": [
+            {
+              "originalPosition": 256,
+              "body": "\ud83d\ude0e ",
+              "createdAt": "2023-12-20T16:45:07Z",
+              "updatedAt": "2023-12-20T16:45:07Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
