@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-12-21T00:07:20.152683+00:00",
+  "timestamp": "2023-12-24T00:08:00.076622+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -309,7 +309,7 @@
       "labels": [],
       "body": "See Zulip for discussion on some of these changes.",
       "createdAt": "2023-12-20T12:27:06Z",
-      "updatedAt": "2023-12-20T16:45:07Z",
+      "updatedAt": "2023-12-21T11:22:27Z",
       "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
       "baseRefName": "main",
       "baseRefOid": "6ad573a31fc94d40f43245ac0311e9cd56815ee5",
@@ -320,7 +320,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@dconnolly Do you want changes?",
+          "createdAt": "2023-12-21T11:22:26Z",
+          "updatedAt": "2023-12-21T11:22:26Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOKq5sns5qw5RQ",
