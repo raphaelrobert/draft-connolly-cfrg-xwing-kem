@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-12-24T00:08:00.076622+00:00",
+  "timestamp": "2023-12-26T00:07:11.817378+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -309,13 +309,13 @@
       "labels": [],
       "body": "See Zulip for discussion on some of these changes.",
       "createdAt": "2023-12-20T12:27:06Z",
-      "updatedAt": "2023-12-21T11:22:27Z",
+      "updatedAt": "2023-12-24T15:03:41Z",
       "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
       "baseRefName": "main",
       "baseRefOid": "6ad573a31fc94d40f43245ac0311e9cd56815ee5",
       "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
       "headRefName": "bas-big-pass",
-      "headRefOid": "1cac1f033aac629d325a1baabe1bde1e8502db62",
+      "headRefOid": "da3e5b18c1138f4ba0478b43e8a3ce3dc10d729a",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
