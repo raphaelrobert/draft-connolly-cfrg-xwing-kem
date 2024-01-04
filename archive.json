@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-01-02T00:07:36.152082+00:00",
+  "timestamp": "2024-01-04T00:07:43.572335+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -302,24 +302,26 @@
       "id": "PR_kwDOKq5sns5id0ex",
       "title": "Big pass",
       "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/4",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bwesterb",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "See Zulip for discussion on some of these changes.",
       "createdAt": "2023-12-20T12:27:06Z",
-      "updatedAt": "2023-12-24T15:03:41Z",
+      "updatedAt": "2024-01-03T17:54:19Z",
       "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
       "baseRefName": "main",
       "baseRefOid": "6ad573a31fc94d40f43245ac0311e9cd56815ee5",
       "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
       "headRefName": "bas-big-pass",
       "headRefOid": "da3e5b18c1138f4ba0478b43e8a3ce3dc10d729a",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-01-03T17:50:41Z",
+      "mergedAt": "2024-01-03T17:50:41Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "38b29c1d0ccb8ef43500b43e3356c0afbd484e7b"
+      },
       "comments": [
         {
           "author": "bwesterb",
@@ -327,6 +329,13 @@
           "body": "@dconnolly Do you want changes?",
           "createdAt": "2023-12-21T11:22:26Z",
           "updatedAt": "2023-12-21T11:22:26Z"
+        },
+        {
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "body": "How do we move forward? :)",
+          "createdAt": "2024-01-02T14:02:39Z",
+          "updatedAt": "2024-01-02T14:02:39Z"
         }
       ],
       "reviews": [
@@ -567,6 +576,46 @@
               "body": "\ud83d\ude0e ",
               "createdAt": "2023-12-20T16:45:07Z",
               "updatedAt": "2023-12-20T16:45:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5rBxCi",
+          "commit": {
+            "abbreviatedOid": "da3e5b1"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "Merging; I will probably want to go back in and add explicit stuff on serialization but good and aligned with paper for now",
+          "createdAt": "2023-12-24T21:47:41Z",
+          "updatedAt": "2024-01-03T17:50:22Z",
+          "comments": [
+            {
+              "originalPosition": 257,
+              "body": "\ud83d\udc4d\ud83d\udd2b\u2708\ufe0f",
+              "createdAt": "2023-12-24T21:47:42Z",
+              "updatedAt": "2024-01-03T17:50:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5rdPY5",
+          "commit": {
+            "abbreviatedOid": "da3e5b1"
+          },
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-01-03T17:54:19Z",
+          "updatedAt": "2024-01-03T17:54:19Z",
+          "comments": [
+            {
+              "originalPosition": 257,
+              "body": "```python\r\n>>> len('\ud83d\udd2b\u2708\ufe0f'.encode('utf-8') )\r\n10\r\n```\r\n\r\n:(",
+              "createdAt": "2024-01-03T17:54:19Z",
+              "updatedAt": "2024-01-03T17:54:19Z"
             }
           ]
         }
