@@ -94,7 +94,8 @@ Table of Contents
    9.  References
      9.1.  Normative References
      9.2.  Informative References
-   Appendix A.  Test vectors
+   Appendix A.  Test vectors # TODO: replace with test vectors that
+           re-use ML-KEM, X25519 values
    Acknowledgments
    Authors' Addresses
 
@@ -538,7 +539,8 @@ Table of Contents
               September 2023, <https://datatracker.ietf.org/doc/html/
               draft-tls-westerbaan-xyber768d00-03>.
 
-Appendix A.  Test vectors
+Appendix A.  Test vectors # TODO: replace with test vectors that re-use
+             ML-KEM, X25519 values
 
 seed   7f9c2ba4e88f827d616045507605853ed73b8093f6efbc88eb1a6eacfa66ef26
 sk
