@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-01-04T00:07:43.572335+00:00",
+  "timestamp": "2024-01-07T00:08:19.081366+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -618,6 +618,110 @@
               "updatedAt": "2024-01-03T17:54:19Z"
             }
           ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOKq5sns5jTGb6",
+      "title": "Fix DeriveKeyPair",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/5",
+      "state": "MERGED",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "We swapped the order of ML-KEM and X25519, but forgot to do that in keygen/key derivation. Fixed now.",
+      "createdAt": "2024-01-05T10:21:28Z",
+      "updatedAt": "2024-01-05T15:58:39Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "38b29c1d0ccb8ef43500b43e3356c0afbd484e7b",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "order",
+      "headRefOid": "7248c35057ea4a594143e8cdd402c70c3cacc9e6",
+      "closedAt": "2024-01-05T15:58:39Z",
+      "mergedAt": "2024-01-05T15:58:39Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "0cc854f3b7f2e039290ec4b991b464071180433b"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5rqM0x",
+          "commit": {
+            "abbreviatedOid": "7248c35"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-01-05T15:58:35Z",
+          "updatedAt": "2024-01-05T15:58:35Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOKq5sns5jUqG8",
+      "title": "Preliminary test vectors",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/6",
+      "state": "MERGED",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-01-05T15:28:48Z",
+      "updatedAt": "2024-01-05T22:26:16Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "0cc854f3b7f2e039290ec4b991b464071180433b",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "vectors",
+      "headRefOid": "585fb36d3464d87639c990bc72e6cc0cb13af6f2",
+      "closedAt": "2024-01-05T22:26:15Z",
+      "mergedAt": "2024-01-05T22:26:15Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "efc09f0ad34f190fb00f860320fd87934db6c733"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5rqqbl",
+          "commit": {
+            "abbreviatedOid": "70489f8"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-01-05T16:29:37Z",
+          "updatedAt": "2024-01-05T16:29:37Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\n# Test vectors # TODO: replace with test vectors that re-use ML-KEM, X25519 values\r\n\r\n```",
+              "createdAt": "2024-01-05T16:29:37Z",
+              "updatedAt": "2024-01-05T16:29:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5rtFCE",
+          "commit": {
+            "abbreviatedOid": "585fb36"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-01-05T22:26:04Z",
+          "updatedAt": "2024-01-05T22:26:04Z",
+          "comments": []
         }
       ]
     }
