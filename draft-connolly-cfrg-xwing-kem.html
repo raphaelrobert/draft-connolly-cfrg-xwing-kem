@@ -1536,7 +1536,7 @@ fixed length byte strings.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
 def GenerateKeyPair():
   (sk_M, pk_M) = ML-KEM-768.KeyGen()
   sk_X = random(32)
-  pk_X = X25519(seed_X, X25519_BASE)
+  pk_X = X25519(sk_X, X25519_BASE)
   return concat(sk_M, sk_X), concat(pk_M, pk_X)
 </pre><a href="#section-5.2-2" class="pilcrow">¶</a>
 </div>
@@ -1553,7 +1553,7 @@ derandomized variant of key generation.<a href="#section-5.2.1-1" class="pilcrow
 def GenerateKeyPairDerand(seed):
   (sk_M, pk_M) = ML-KEM-768.KeyGenDerand(seed[0:64])
   sk_X = seed[64:96]
-  pk_X = X25519(seed_X, X25519_BASE)
+  pk_X = X25519(sk_X, X25519_BASE)
   return concat(sk_M, sk_X), concat(pk_M, pk_X)
 </pre><a href="#section-5.2.1-2" class="pilcrow">¶</a>
 </div>

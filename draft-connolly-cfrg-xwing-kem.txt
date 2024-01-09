@@ -294,7 +294,7 @@ Table of Contents
    def GenerateKeyPair():
      (sk_M, pk_M) = ML-KEM-768.KeyGen()
      sk_X = random(32)
-     pk_X = X25519(seed_X, X25519_BASE)
+     pk_X = X25519(sk_X, X25519_BASE)
      return concat(sk_M, sk_X), concat(pk_M, pk_X)
 
 5.2.1.  Key derivation
@@ -306,7 +306,7 @@ Table of Contents
    def GenerateKeyPairDerand(seed):
      (sk_M, pk_M) = ML-KEM-768.KeyGenDerand(seed[0:64])
      sk_X = seed[64:96]
-     pk_X = X25519(seed_X, X25519_BASE)
+     pk_X = X25519(sk_X, X25519_BASE)
      return concat(sk_M, sk_X), concat(pk_M, pk_X)
 
    seed must be 96 bytes.
