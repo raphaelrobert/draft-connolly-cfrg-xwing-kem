@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-01-07T00:08:19.081366+00:00",
+  "timestamp": "2024-01-09T00:08:01.907291+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -724,6 +724,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOKq5sns5jZ4Oq",
+      "title": "Remove stretching",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/7",
+      "state": "OPEN",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Also fixes a few small things:\r\n\r\n- Refer to ML-KEM functions that are actually defined.\r\n- Better text around derandomized versions.\r\n- Fix X25519 keygen.",
+      "createdAt": "2024-01-07T12:17:13Z",
+      "updatedAt": "2024-01-08T11:46:41Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "efc09f0ad34f190fb00f860320fd87934db6c733",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "no-stretching",
+      "headRefOid": "4357236aeb975a42bd6e8a3b6aac948d8812b011",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
