@@ -280,9 +280,9 @@ Table of Contents
    X-Wing encapsulation key, decapsulation key, ciphertexts and shared
    secrets are all fixed length byte strings.
 
-   Decapsulation key:  2432 bytes
+   Decapsulation key (private):  2432 bytes
 
-   Encapsulation key:  1216 bytes
+   Encapsulation key (public):  1216 bytes
 
    Ciphertext:  1120 bytes
 
