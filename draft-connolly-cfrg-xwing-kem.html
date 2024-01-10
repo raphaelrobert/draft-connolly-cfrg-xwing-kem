@@ -1436,7 +1436,10 @@ a cryptographically-secure random number generator.<a href="#section-3-3.2.1" cl
 <ul class="normal">
 <li class="normal" id="section-4-2.1.2.1">
               <p id="section-4-2.1.2.1.1"><code>ML-KEM-768.KeyGen()</code>: Randomized algorithm to generate an
-ML-KEM-768 key pair <code>(sk_M, pk_M)</code>.<a href="#section-4-2.1.2.1.1" class="pilcrow">¶</a></p>
+ML-KEM-768 key pair <code>(pk_M, sk_M)</code> of an encapsulation key <code>pk_M</code>
+and decapsulation key <code>sk_M</code>.
+Note that <code>ML-KEM-768.KeyGen()</code> returns the keys in reverse
+order of <code>GenerateKeyPair()</code> defined below.<a href="#section-4-2.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4-2.1.2.2">
               <p id="section-4-2.1.2.2.1"><code>ML-KEM-768.Encaps(pk_M)</code>: Randomized algorithm to generate <code>(ss_M,
@@ -1545,7 +1548,7 @@ follows.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-5.2-2">
 <pre>
 def GenerateKeyPair():
-  (sk_M, pk_M) = ML-KEM-768.KeyGen()
+  (pk_M, sk_M) = ML-KEM-768.KeyGen()
   sk_X = random(32)
   pk_X = X25519(sk_X, X25519_BASE)
   return concat(sk_M, sk_X), concat(pk_M, pk_X)
@@ -1564,7 +1567,7 @@ derandomized variant of key generation.<a href="#section-5.2.1-1" class="pilcrow
 <div class="alignLeft art-text artwork" id="section-5.2.1-2">
 <pre>
 def GenerateKeyPairDerand(seed):
-  (sk_M, pk_M) = ML-KEM-768.KeyGenDerand(seed[0:64])
+  (pk_M, sk_M) = ML-KEM-768.KeyGenDerand(seed[0:64])
   sk_X = seed[64:96]
   pk_X = X25519(sk_X, X25519_BASE)
   return concat(sk_M, sk_X), concat(pk_M, pk_X)
