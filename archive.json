@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-01-11T00:07:35.708752+00:00",
+  "timestamp": "2024-01-14T00:08:14.780544+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -49,7 +49,63 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 8,
+      "id": "I_kwDOKq5sns57y0Tm",
+      "title": "Remove encapsulation key as argument to `Decapsulate()`",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/issues/8",
+      "state": "OPEN",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "We need the X25519 public key in the combiner to be IND-CCA robust, so we need it during `Decapsulation()`. However, that is quite unexpected for most APIs, and Mike Ounsworth points out that HSMs might find this difficult.\r\n\r\nThere are at least two options:\r\n\r\n1. Recompute the X25519 public key from the secret key in the decapsulation in the spec. (Implementations can still cache the value during unpacking/keygen)\r\n2. Include X25519 public key in the X-Wing private key, similar to ML-KEM. Suggested and preferred by @FiloSottile. \r\n\r\nI also lean to the latter.",
+      "createdAt": "2024-01-11T15:10:13Z",
+      "updatedAt": "2024-01-11T17:59:12Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "jedisct1",
+          "authorAssociation": "NONE",
+          "body": "From an implementer perspective, I'd lean for 2. as well.",
+          "createdAt": "2024-01-11T15:23:37Z",
+          "updatedAt": "2024-01-11T15:23:37Z"
+        },
+        {
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "body": "I don't hate option 2, and it aligns with what ML-KEM does under the hood",
+          "createdAt": "2024-01-11T17:59:11Z",
+          "updatedAt": "2024-01-11T17:59:11Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOKq5sns57zZq3",
+      "title": "Add section to track implementations",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/issues/9",
+      "state": "OPEN",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- https://github.com/FiloSottile/mlkem768 (-00)\r\n- https://github.com/cloudflare/circl/pull/471 (-00)",
+      "createdAt": "2024-01-11T16:15:18Z",
+      "updatedAt": "2024-01-12T17:08:12Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "rugo",
+          "authorAssociation": "NONE",
+          "body": "Here is an experimental Rust implementation: https://github.com/rugo/xwing-kem.rs\r\n\r\nAlso suffers from #8 and computes the x25519 pk on every call to `decaps`.",
+          "createdAt": "2024-01-12T17:08:11Z",
+          "updatedAt": "2024-01-12T17:08:11Z"
+        }
+      ]
+    }
+  ],
   "pulls": [
     {
       "number": 1,
