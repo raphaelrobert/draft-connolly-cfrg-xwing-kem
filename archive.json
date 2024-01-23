@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-01-21T00:08:13.528886+00:00",
+  "timestamp": "2024-01-23T00:07:44.675813+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDOKq5sns57y0Tm",
       "title": "Remove encapsulation key as argument to `Decapsulate()`",
       "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/issues/8",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bwesterb",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "We need the X25519 public key in the combiner to be IND-CCA robust, so we need it during `Decapsulation()`. However, that is quite unexpected for most APIs, and Mike Ounsworth points out that HSMs might find this difficult.\r\n\r\nThere are at least two options:\r\n\r\n1. Recompute the X25519 public key from the secret key in the decapsulation in the spec. (Implementations can still cache the value during unpacking/keygen)\r\n2. Include X25519 public key in the X-Wing private key, similar to ML-KEM. Suggested and preferred by @FiloSottile. \r\n\r\nI also lean to the latter.",
       "createdAt": "2024-01-11T15:10:13Z",
-      "updatedAt": "2024-01-11T17:59:12Z",
-      "closedAt": null,
+      "updatedAt": "2024-01-22T14:33:07Z",
+      "closedAt": "2024-01-22T14:33:07Z",
       "comments": [
         {
           "author": "jedisct1",
@@ -78,6 +78,13 @@
           "body": "I don't hate option 2, and it aligns with what ML-KEM does under the hood",
           "createdAt": "2024-01-11T17:59:11Z",
           "updatedAt": "2024-01-11T17:59:11Z"
+        },
+        {
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "body": "closed with #10",
+          "createdAt": "2024-01-22T14:32:53Z",
+          "updatedAt": "2024-01-22T14:32:53Z"
         }
       ]
     },
@@ -808,6 +815,68 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOKq5sns5ktXxE",
+      "title": "Store copy of X25519 public key in X-Wing decapsulation key",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/10",
+      "state": "MERGED",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #2",
+      "createdAt": "2024-01-22T11:16:36Z",
+      "updatedAt": "2024-01-22T14:31:50Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "849a345a2296ec292a36ab145956cce43172c4d0",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "issue-2",
+      "headRefOid": "55e673ccb50e37fbd30903ebe2e5550fd5848067",
+      "closedAt": "2024-01-22T14:31:49Z",
+      "mergedAt": "2024-01-22T14:31:49Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "a5f3abd5b139f9cc6840876655535d53630b953c"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5teGQQ",
+          "commit": {
+            "abbreviatedOid": "77ea5b8"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-01-22T14:30:31Z",
+          "updatedAt": "2024-01-22T14:31:11Z",
+          "comments": [
+            {
+              "originalPosition": 127,
+              "body": "```suggestion\n  require separate access to the X-Wing public key. See #2.\n```\n",
+              "createdAt": "2024-01-22T14:30:31Z",
+              "updatedAt": "2024-01-22T14:31:11Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKq5sns5teHLC",
+          "commit": {
+            "abbreviatedOid": "55e673c"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-01-22T14:31:35Z",
+          "updatedAt": "2024-01-22T14:31:35Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
