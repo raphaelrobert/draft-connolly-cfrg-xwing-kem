@@ -1236,21 +1236,27 @@ ML-KEM-768.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-test-vectors-todo-replace-w" class="internal xref">Test vectors # TODO: replace with test vectors that re-use ML-KEM, X25519 values</a></p>
+            <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-implementations" class="internal xref">Implementations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref">Appendix B</a>.  <a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref">Appendix B</a>.  <a href="#name-test-vectors-todo-replace-w" class="internal xref">Test vectors # TODO: replace with test vectors that re-use ML-KEM, X25519 values</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
-            <p id="section-toc.1-1.12.1"><a href="#appendix-C" class="auto internal xref">Appendix C</a>.  <a href="#name-change-log" class="internal xref">Change log</a></p>
+            <p id="section-toc.1-1.12.1"><a href="#appendix-C" class="auto internal xref">Appendix C</a>.  <a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13">
+            <p id="section-toc.1-1.13.1"><a href="#appendix-D" class="auto internal xref">Appendix D</a>.  <a href="#name-change-log" class="internal xref">Change log</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12.2.1">
-                <p id="section-toc.1-1.12.2.1.1"><a href="#appendix-C.1" class="auto internal xref">C.1</a>.  <a href="#name-since-draft-connolly-cfrg-x" class="internal xref">Since draft-connolly-cfrg-xwing-kem-00</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13.2.1">
+                <p id="section-toc.1-1.13.2.1.1"><a href="#appendix-D.1" class="auto internal xref">D.1</a>.  <a href="#name-since-draft-connolly-cfrg-x" class="internal xref">Since draft-connolly-cfrg-xwing-kem-01</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13.2.2">
+                <p id="section-toc.1-1.13.2.2.1"><a href="#appendix-D.2" class="auto internal xref">D.2</a>.  <a href="#name-since-draft-connolly-cfrg-xw" class="internal xref">Since draft-connolly-cfrg-xwing-kem-00</a></p>
 </li>
             </ul>
 </li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13">
-            <p id="section-toc.1-1.13.1"><a href="#appendix-D" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.14">
+            <p id="section-toc.1-1.14.1"><a href="#appendix-E" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1931,12 +1937,35 @@ in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-tls-rfc8447bi
 </section>
 </div>
 </section>
-<div id="test-vectors-todo-replace-with-test-vectors-that-re-use-ml-kem-x25519-values">
+<div id="implementations">
 <section id="appendix-A">
-      <h2 id="name-test-vectors-todo-replace-w">
-<a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-test-vectors-todo-replace-w" class="section-name selfRef">Test vectors # TODO: replace with test vectors that re-use ML-KEM, X25519 values</a>
+      <h2 id="name-implementations">
+<a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-implementations" class="section-name selfRef">Implementations</a>
       </h2>
-<div class="alignLeft art-text artwork" id="appendix-A-1">
+<ul class="normal">
+<li class="normal" id="appendix-A-1.1">
+          <p id="appendix-A-1.1.1">Go<a href="#appendix-A-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-A-1.1.2.1">
+              <p id="appendix-A-1.1.2.1.1"><a href="https://github.com/cloudflare/circl/pull/471">CIRCL</a><a href="#appendix-A-1.1.2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="appendix-A-1.1.2.2">
+              <p id="appendix-A-1.1.2.2.1"><a href="https://github.com/FiloSottile/mlkem768">Filippo</a><a href="#appendix-A-1.1.2.2.1" class="pilcrow">¶</a></p>
+<p id="appendix-A-1.1.2.2.2">
+Note: implements the older <code>-00</code> version of this memo at the time of
+writing.<a href="#appendix-A-1.1.2.2.2" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+</li>
+      </ul>
+</section>
+</div>
+<div id="test-vectors-todo-replace-with-test-vectors-that-re-use-ml-kem-x25519-values">
+<section id="appendix-B">
+      <h2 id="name-test-vectors-todo-replace-w">
+<a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-test-vectors-todo-replace-w" class="section-name selfRef">Test vectors # TODO: replace with test vectors that re-use ML-KEM, X25519 values</a>
+      </h2>
+<div class="alignLeft art-text artwork" id="appendix-B-1">
 <pre>
 seed
   7f9c2ba4e88f827d616045507605853ed73b8093f6efbc88eb1a6eacfa66ef263cb1eea9
@@ -2378,39 +2407,54 @@ ct
   35d5050b5526ba59f893a1778103b6e2d946090c0eba049e5c1ad843a3121d539564866a
   f5647437
 ss     1e037823ddbf1875756d86a3374b2d2347d5b7f3c84d229ecc5960523cdaa8b4
-</pre><a href="#appendix-A-1" class="pilcrow">¶</a>
+</pre><a href="#appendix-B-1" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
 <div id="acknowledgments">
-<section id="appendix-B">
+<section id="appendix-C">
       <h2 id="name-acknowledgments">
-<a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
+<a href="#appendix-C" class="section-number selfRef">Appendix C. </a><a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-B-1">TODO acknowledge.<a href="#appendix-B-1" class="pilcrow">¶</a></p>
+<p id="appendix-C-1">TODO acknowledge.<a href="#appendix-C-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="change-log">
-<section id="appendix-C">
+<section id="appendix-D">
       <h2 id="name-change-log">
-<a href="#appendix-C" class="section-number selfRef">Appendix C. </a><a href="#name-change-log" class="section-name selfRef">Change log</a>
+<a href="#appendix-D" class="section-number selfRef">Appendix D. </a><a href="#name-change-log" class="section-name selfRef">Change log</a>
       </h2>
 <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="appendix-C-1.1">
-          <p id="appendix-C-1.1.1"><strong>RFC Editor's Note:</strong> Please remove this section prior to publication of a
-final version of this document.<a href="#appendix-C-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal ulEmpty" id="appendix-D-1.1">
+          <p id="appendix-D-1.1.1"><strong>RFC Editor's Note:</strong> Please remove this section prior to publication of a
+final version of this document.<a href="#appendix-D-1.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<div id="since-draft-connolly-cfrg-xwing-kem-00">
-<section id="appendix-C.1">
+<div id="since-draft-connolly-cfrg-xwing-kem-01">
+<section id="appendix-D.1">
         <h3 id="name-since-draft-connolly-cfrg-x">
-<a href="#appendix-C.1" class="section-number selfRef">C.1. </a><a href="#name-since-draft-connolly-cfrg-x" class="section-name selfRef">Since draft-connolly-cfrg-xwing-kem-00</a>
+<a href="#appendix-D.1" class="section-number selfRef">D.1. </a><a href="#name-since-draft-connolly-cfrg-x" class="section-name selfRef">Since draft-connolly-cfrg-xwing-kem-01</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="appendix-C.1-1.1">
-            <p id="appendix-C.1-1.1.1">A copy of the X25519 public key is now included in the X-Wing
+<li class="normal" id="appendix-D.1-1.1">
+            <p id="appendix-D.1-1.1.1">Add list of implementations.<a href="#appendix-D.1-1.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="appendix-D.1-1.2">
+            <p id="appendix-D.1-1.2.1">Miscellaneous editorial improvements.<a href="#appendix-D.1-1.2.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+</section>
+</div>
+<div id="since-draft-connolly-cfrg-xwing-kem-00">
+<section id="appendix-D.2">
+        <h3 id="name-since-draft-connolly-cfrg-xw">
+<a href="#appendix-D.2" class="section-number selfRef">D.2. </a><a href="#name-since-draft-connolly-cfrg-xw" class="section-name selfRef">Since draft-connolly-cfrg-xwing-kem-00</a>
+        </h3>
+<ul class="normal">
+<li class="normal" id="appendix-D.2-1.1">
+            <p id="appendix-D.2-1.1.1">A copy of the X25519 public key is now included in the X-Wing
 decapsulation (private) key, so that decapsulation does not
-require separate access to the X-Wing public key. See #2.<a href="#appendix-C.1-1.1.1" class="pilcrow">¶</a></p>
+require separate access to the X-Wing public key. See #2.<a href="#appendix-D.2-1.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -2418,7 +2462,7 @@ require separate access to the X-Wing public key. See #2.<a href="#appendix-C.1-
 </section>
 </div>
 <div id="authors-addresses">
-<section id="appendix-D">
+<section id="appendix-E">
       <h2 id="name-authors-addresses">
 <a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>

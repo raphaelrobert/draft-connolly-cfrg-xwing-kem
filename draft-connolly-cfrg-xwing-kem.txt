@@ -96,11 +96,13 @@ Table of Contents
    9.  References
      9.1.  Normative References
      9.2.  Informative References
-   Appendix A.  Test vectors # TODO: replace with test vectors that
+   Appendix A.  Implementations
+   Appendix B.  Test vectors # TODO: replace with test vectors that
            re-use ML-KEM, X25519 values
-   Appendix B.  Acknowledgments
-   Appendix C.  Change log
-     C.1.  Since draft-connolly-cfrg-xwing-kem-00
+   Appendix C.  Acknowledgments
+   Appendix D.  Change log
+     D.1.  Since draft-connolly-cfrg-xwing-kem-01
+     D.2.  Since draft-connolly-cfrg-xwing-kem-00
    Authors' Addresses
 
 1.  Introduction
@@ -584,7 +586,18 @@ Table of Contents
               September 2023, <https://datatracker.ietf.org/doc/html/
               draft-tls-westerbaan-xyber768d00-03>.
 
-Appendix A.  Test vectors # TODO: replace with test vectors that re-use
+Appendix A.  Implementations
+
+   *  Go
+
+      -  CIRCL (https://github.com/cloudflare/circl/pull/471)
+
+      -  Filippo (https://github.com/FiloSottile/mlkem768)
+
+         Note: implements the older -00 version of this memo at the time
+         of writing.
+
+Appendix B.  Test vectors # TODO: replace with test vectors that re-use
              ML-KEM, X25519 values
 
 seed
@@ -1028,16 +1041,22 @@ ct
   f5647437
 ss     1e037823ddbf1875756d86a3374b2d2347d5b7f3c84d229ecc5960523cdaa8b4
 
-Appendix B.  Acknowledgments
+Appendix C.  Acknowledgments
 
    TODO acknowledge.
 
-Appendix C.  Change log
+Appendix D.  Change log
 
       *RFC Editor's Note:* Please remove this section prior to
       publication of a final version of this document.
 
-C.1.  Since draft-connolly-cfrg-xwing-kem-00
+D.1.  Since draft-connolly-cfrg-xwing-kem-01
+
+   *  Add list of implementations.
+
+   *  Miscellaneous editorial improvements.
+
+D.2.  Since draft-connolly-cfrg-xwing-kem-00
 
    *  A copy of the X25519 public key is now included in the X-Wing
       decapsulation (private) key, so that decapsulation does not
