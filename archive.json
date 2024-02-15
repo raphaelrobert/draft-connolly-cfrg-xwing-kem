@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-13T00:07:30.870161+00:00",
+  "timestamp": "2024-02-15T00:07:23.873185+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -93,15 +93,15 @@
       "id": "I_kwDOKq5sns57zZq3",
       "title": "Add section to track implementations",
       "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/issues/9",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bwesterb",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "- https://github.com/FiloSottile/mlkem768 (-00)\r\n- https://github.com/cloudflare/circl/pull/471 (-00)",
       "createdAt": "2024-01-11T16:15:18Z",
-      "updatedAt": "2024-01-12T17:08:12Z",
-      "closedAt": null,
+      "updatedAt": "2024-02-14T13:24:58Z",
+      "closedAt": "2024-02-14T13:24:58Z",
       "comments": [
         {
           "author": "rugo",
@@ -109,6 +109,13 @@
           "body": "Here is an experimental Rust implementation: https://github.com/rugo/xwing-kem.rs\r\n\r\nAlso suffers from #8 and computes the x25519 pk on every call to `decaps`.",
           "createdAt": "2024-01-12T17:08:11Z",
           "updatedAt": "2024-01-12T17:08:11Z"
+        },
+        {
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "body": "closed as resolved \u2705",
+          "createdAt": "2024-02-14T13:24:33Z",
+          "updatedAt": "2024-02-14T13:24:33Z"
         }
       ]
     }
@@ -874,6 +881,171 @@
           "body": "",
           "createdAt": "2024-01-22T14:31:35Z",
           "updatedAt": "2024-01-22T14:31:35Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOKq5sns5m292T",
+      "title": "Add reference to implementations",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/11",
+      "state": "MERGED",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "GH #9",
+      "createdAt": "2024-02-14T13:15:48Z",
+      "updatedAt": "2024-02-14T13:23:52Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "6a2adfb0be7ca18022c668052dcf92dba5b7563e",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "impls",
+      "headRefOid": "253aa7c98d472c45f15eba1b4f0f20d4b631d684",
+      "closedAt": "2024-02-14T13:23:51Z",
+      "mergedAt": "2024-02-14T13:23:51Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "8fe6eff72f1d5f5cb8b7eb12856d462755c0edbd"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5wEn4n",
+          "commit": {
+            "abbreviatedOid": "253aa7c"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-14T13:23:47Z",
+          "updatedAt": "2024-02-14T13:23:47Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOKq5sns5m4WsT",
+      "title": "Add Python specification",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/12",
+      "state": "MERGED",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-14T16:30:58Z",
+      "updatedAt": "2024-02-14T17:39:58Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "8fe6eff72f1d5f5cb8b7eb12856d462755c0edbd",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "python",
+      "headRefOid": "b30ade7981489c3fa4597dd99f0c1338b2ee8202",
+      "closedAt": "2024-02-14T17:18:30Z",
+      "mergedAt": "2024-02-14T17:18:30Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "c4bce101625329f3035f79bd3cbf6c8713919341"
+      },
+      "comments": [
+        {
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "body": "boom \r\n<img width=\"796\" alt=\"image\" src=\"https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/assets/552961/94a53c4a-e96a-4b38-87ff-cec4f8516683\">\r\n\r\n",
+          "createdAt": "2024-02-14T17:18:08Z",
+          "updatedAt": "2024-02-14T17:18:08Z"
+        },
+        {
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks!",
+          "createdAt": "2024-02-14T17:39:57Z",
+          "updatedAt": "2024-02-14T17:39:57Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5wGyB8",
+          "commit": {
+            "abbreviatedOid": "cc65f9e"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-14T17:04:57Z",
+          "updatedAt": "2024-02-14T17:04:57Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOKq5sns5wGzG7",
+          "commit": {
+            "abbreviatedOid": "cc65f9e"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "CHANGES_REQUESTED",
+          "body": "need to fix the datatracker parsing",
+          "createdAt": "2024-02-14T17:07:08Z",
+          "updatedAt": "2024-02-14T17:07:08Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOKq5sns5wG4d1",
+          "commit": {
+            "abbreviatedOid": "b30ade7"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "The CI that checks the ",
+          "createdAt": "2024-02-14T17:18:15Z",
+          "updatedAt": "2024-02-14T17:18:15Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOKq5sns5m4w-l",
+      "title": "add ref to xwing-kem.rs",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/13",
+      "state": "OPEN",
+      "author": "bwesterb",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-14T17:41:56Z",
+      "updatedAt": "2024-02-14T17:52:51Z",
+      "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "baseRefName": "main",
+      "baseRefOid": "c4bce101625329f3035f79bd3cbf6c8713919341",
+      "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
+      "headRefName": "xwing-kem.rs",
+      "headRefOid": "10d369db8eb13bfbcdffe07a626a967dc21b97eb",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKq5sns5wHH4u",
+          "commit": {
+            "abbreviatedOid": "10d369d"
+          },
+          "author": "dconnolly",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-14T17:52:51Z",
+          "updatedAt": "2024-02-14T17:52:51Z",
           "comments": []
         }
       ]
