@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-15T00:07:23.873185+00:00",
+  "timestamp": "2024-02-18T00:07:36.135586+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -1015,24 +1015,26 @@
       "id": "PR_kwDOKq5sns5m4w-l",
       "title": "add ref to xwing-kem.rs",
       "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/pull/13",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bwesterb",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-14T17:41:56Z",
-      "updatedAt": "2024-02-14T17:52:51Z",
+      "updatedAt": "2024-02-15T13:36:32Z",
       "baseRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
       "baseRefName": "main",
       "baseRefOid": "c4bce101625329f3035f79bd3cbf6c8713919341",
       "headRepository": "dconnolly/draft-connolly-cfrg-xwing-kem",
       "headRefName": "xwing-kem.rs",
       "headRefOid": "10d369db8eb13bfbcdffe07a626a967dc21b97eb",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-15T13:36:31Z",
+      "mergedAt": "2024-02-15T13:36:31Z",
+      "mergedBy": "dconnolly",
+      "mergeCommit": {
+        "oid": "d64a62a4dee1d5f0dd0910de93437cb93ded92f4"
+      },
       "comments": [],
       "reviews": [
         {
