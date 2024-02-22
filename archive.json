@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-20T00:07:09.501150+00:00",
+  "timestamp": "2024-02-22T00:06:54.104402+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -116,6 +116,30 @@
           "body": "closed as resolved \u2705",
           "createdAt": "2024-02-14T13:24:33Z",
           "updatedAt": "2024-02-14T13:24:33Z"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOKq5sns5_6MbS",
+      "title": "ML-KEM-768.KeyGenDerand definition disagrees with Appendix B and C",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/issues/14",
+      "state": "OPEN",
+      "author": "FiloSottile",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Section 4 defines `ML-KEM-768.KeyGenDerand` as\r\n\r\n> seed[0:32] is used for z in line 1 of algorithm 15 from [[MLKEM](https://dconnolly.github.io/draft-connolly-cfrg-xwing-kem/draft-connolly-cfrg-xwing-kem.html#MLKEM)] and seed[32:64] is used for d in line 1 of algorithm 12.\r\n\r\nHowever, the implementation in Appendix B.3 does the opposite\r\n\r\n```\r\nz = seed[32:]\r\npk, sk2 = InnerKeyGen(seed[:32], params)\r\n```\r\n\r\nand the test vector in Appendix C passes when using seed[0:32] for d and seed[32:64] for z.",
+      "createdAt": "2024-02-21T06:49:57Z",
+      "updatedAt": "2024-02-21T10:39:01Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bwesterb",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Whoops, you're right. Fixed on main.",
+          "createdAt": "2024-02-21T10:39:00Z",
+          "updatedAt": "2024-02-21T10:39:00Z"
         }
       ]
     }
