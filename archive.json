@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-03-05T00:07:02.585790+00:00",
+  "timestamp": "2024-03-07T00:05:52.996780+00:00",
   "repo": "dconnolly/draft-connolly-cfrg-xwing-kem",
   "labels": [
     {
@@ -140,6 +140,30 @@
           "body": "Whoops, you're right. Fixed on main.",
           "createdAt": "2024-02-21T10:39:00Z",
           "updatedAt": "2024-02-21T10:39:00Z"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "I_kwDOKq5sns6BX6mm",
+      "title": "Cite RFC 9180",
+      "url": "https://github.com/dconnolly/draft-connolly-cfrg-xwing-kem/issues/15",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This is in the references, but it is not referred to by the body text.",
+      "createdAt": "2024-03-06T03:02:21Z",
+      "updatedAt": "2024-03-06T03:04:30Z",
+      "closedAt": "2024-03-06T03:04:30Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "NONE",
+          "body": "Oops [wrong repo](https://github.com/dconnolly/draft-connolly-cfrg-hpke-mlkem/issues/2)",
+          "createdAt": "2024-03-06T03:04:30Z",
+          "updatedAt": "2024-03-06T03:04:30Z"
         }
       ]
     }
